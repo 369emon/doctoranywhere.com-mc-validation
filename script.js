@@ -11,9 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const mcNumber = mcNumberInput.value.trim();
             
             if (!mcNumber) {
-                alert('Please enter a Medical Certificate reference number');
+                // Add visual feedback for empty input
+                mcNumberInput.classList.add('error');
+                mcNumberInput.focus();
                 return;
             }
+            
+            // Remove error styling if present
+            mcNumberInput.classList.remove('error');
 
             // Show the validation result
             if (validationResult) {
@@ -25,8 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     refNumberElement.textContent = mcNumber;
                 }
                 
-                // Scroll to the result
-                validationResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                // Scroll to the result with fallback for older browsers
+                if (validationResult.scrollIntoView) {
+                    validationResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
             }
         });
     }

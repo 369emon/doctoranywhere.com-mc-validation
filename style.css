@@ -16,6 +16,11 @@
     transition: all 0.3s ease;
 }
 
+/* Hide validation result by default */
+#validation-result.hidden {
+    display: none;
+}
+
 .certificate-detail {
     padding: 1rem;
     border-bottom: 1px solid #e5e7eb;

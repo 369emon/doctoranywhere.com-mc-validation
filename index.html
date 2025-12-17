@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoctorAnywhere - MC Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <custom-navbar></custom-navbar>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Medical Certificate Validation</h1>
+                <p class="text-gray-600">Verify the authenticity of your DoctorAnywhere medical certificate</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i data-feather="info" class="h-5 w-5 text-blue-500"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-blue-700">
+                                Please enter your Medical Certificate reference number to verify its authenticity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label for="mc-number" class="block text-sm font-medium text-gray-700 mb-1">MC Reference Number</label>
+                        <input type="text" id="mc-number" name="mc-number" 
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+                            placeholder="e.g. DA-MC-2023-XXXXXX">
+                    </div>
+
+                    <div>
+                        <button type="submit" 
+                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
+                            Verify Certificate
+                        </button>
+                    </div>
+                </form>
+
+                <div id="validation-result" class="hidden">
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded mb-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i data-feather="check-circle" class="h-5 w-5 text-green-500"></i>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-sm font-medium text-green-800">Certificate Validated Successfully</h3>
+                                <div class="mt-2 text-sm text-green-700">
+                                    <p>This medical certificate was issued by DoctorAnywhere and is valid.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white shadow rounded-lg overflow-hidden">
+                        <div class="px-6 py-4 border-b border-gray-200">
+                            <h3 class="text-lg font-medium text-gray-900">Certificate Details</h3>
+                        </div>
+                        <div class="px-6 py-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Reference Number</p>
+                                    <p class="text-sm font-medium text-gray-900" id="ref-number">DA-MC-2023-123456</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Issued Date</p>
+                                    <p class="text-sm font-medium text-gray-900" id="issue-date">15 June 2023</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Patient Name</p>
+                            <p class="text-sm font-medium text-gray-900" id="patient-name">Al Bosry Hasan</p>
+</div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Doctor Name</p>
+                                    <p class="text-sm font-medium text-gray-900" id="doctor-name">Dr. Sarah Lim</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Valid Until</p>
+                                    <p class="text-sm font-medium text-gray-900" id="valid-until">18 June 2023</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">NRIC/Passport</p>
+                                    <p class="text-sm font-medium text-gray-900" id="nric">A09324084</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Status</p>
+                                    <p class="text-sm font-medium text-green-600" id="status">Valid</p>
+                                </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 pt-6">
+<h3 class="text-lg font-medium text-gray-900 mb-3">Need help?</h3>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <i data-feather="help-circle" class="h-5 w-5 text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">
+                                If you're having trouble verifying your medical certificate, please contact our support team at 
+                                <a href="mailto:support@doctoranywhere.com" class="text-blue-600 hover:underline">support@doctoranywhere.com</a> 
+                                or call us at <span class="font-medium">+65 XXXX XXXX</span>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>

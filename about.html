@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About DoctorAnywhere</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <custom-navbar></custom-navbar>
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">About DoctorAnywhere</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Transforming healthcare delivery through technology and innovation</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                <div class="grid md:grid-cols-2">
+                    <div class="p-8 order-last md:order-first">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
+                        <p class="text-gray-600 mb-6">
+                            DoctorAnywhere is on a mission to make healthcare simple, accessible, and convenient for everyone across Southeast Asia.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Founded in 2017, we leverage technology to bridge gaps in healthcare access, providing high-quality medical services whenever and wherever you need them.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full">
+                                <i data-feather="users" class="h-6 w-6 text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-600">Serving over 1 million patients across 5 countries</p>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 flex items-center justify-center p-8">
+                        <img src="http://static.photos/medical/640x360/1" alt="DoctorAnywhere Team" class="rounded-lg shadow-md w-full h-auto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="bg-blue-100 p-3 rounded-full inline-flex mb-4">
+                            <i data-feather="globe" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Regional Presence</h3>
+                        <p class="text-gray-600">Operating in Singapore, Malaysia, Thailand, Vietnam, and the Philippines with plans to expand further.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="bg-blue-100 p-3 rounded-full inline-flex mb-4">
+                            <i data-feather="heart" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Our Doctors</h3>
+                        <p class="text-gray-600">Network of 1000+ qualified doctors and healthcare professionals across various specialties.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="bg-blue-100 p-3 rounded-full inline-flex mb-4">
+                            <i data-feather="award" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Awards</h3>
+                        <p class="text-gray-600">Recognized as one of the fastest growing healthtech startups in Southeast Asia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Our Leadership Team</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <img src="http://static.photos/people/200x200/1" alt="CEO" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="font-bold text-gray-800">Lim Wai Mun</h3>
+                        <p class="text-blue-600 mb-1">Founder & CEO</p>
+                        <p class="text-sm text-gray-600">Former healthcare executive with 20+ years experience</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="http://static.photos/people/200x200/2" alt="CMO" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="font-bold text-gray-800">Dr. Sarah Tan</h3>
+                        <p class="text-blue-600 mb-1">Chief Medical Officer</p>
+                        <p class="text-sm text-gray-600">Specialist in Family Medicine with 15 years practice</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="http://static.photos/people/200x200/3" alt="CTO" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="font-bold text-gray-800">Rajesh Kumar</h3>
+                        <p class="text-blue-600 mb-1">Chief Technology Officer</p>
+                        <p class="text-sm text-gray-600">Healthtech expert with AI/ML background</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

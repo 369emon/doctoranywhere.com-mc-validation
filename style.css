@@ -16,6 +16,17 @@
     transition: all 0.3s ease;
 }
 
+/* Hide validation result by default */
+#validation-result.hidden {
+    display: none;
+}
+
+/* Error styling for input validation */
+input.error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
 .certificate-detail {
     padding: 1rem;
     border-bottom: 1px solid #e5e7eb;
